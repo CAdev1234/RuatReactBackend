@@ -16,8 +16,8 @@ require('./bootstrap');
 
 import React, { Suspense } from 'react'
 import { ReactDOM, render } from 'react-dom'
-import Example from './src/components/Example'
-import { Windmill } from '@windmill/react-ui'
+import { BrowserRouter } from "react-router-dom";
+import Main from './src/main'
 
 render(
     // <SidebarProvider>
@@ -27,6 +27,8 @@ render(
     //     </Windmill>
     //   </Suspense>
     // </SidebarProvider>,
-    <Example />,
+    <BrowserRouter>
+        <Main />
+    </BrowserRouter>,
     document.getElementById('app')
 )
